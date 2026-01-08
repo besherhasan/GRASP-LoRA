@@ -1,0 +1,10 @@
+GRASP LoRA
+Copyright (c) 2026 Besher Mohammad Saleh Hassan
+License: MIT
+
+Third-party components and notices:
+- Portions derived from Meta's llama-recipes / llama-cookbook. License: Llama 2 Community License Agreement.
+- Portions derived from Hugging Face Transformers (transformers/models/llama/modeling_llama.py). License: Apache License 2.0.
+- Portions inspired by AdaLoRA (adalora.py by Qingru Zhang). License: MIT.
+
+Modifications to the above components are licensed under the MIT license noted above.
