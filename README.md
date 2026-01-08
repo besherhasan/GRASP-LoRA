@@ -1,4 +1,4 @@
-# GRASP LoRA (MLQA + XLsum)
+# GRASP LoRA
 
 This folder packages the MLQA and XLsum workflows plus the GRPO controller used to learn sparsity (delete) ratios for bilingual merges (English+Arabic, English+Chinese).
 
