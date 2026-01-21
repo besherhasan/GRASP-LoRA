@@ -1,8 +1,5 @@
 # GRASP LoRA
 
-This folder packages the MLQA and XLsum workflows plus the GRPO controller used to learn sparsity (delete) ratios for bilingual merges (English+Arabic, English+Chinese).
-
-## Abstract
 Parameter efficient fine tuning is a way to adapt LLMs to new languages when compute or data are limited, yet adapter pipelines usually choose a global prune ratio by grid search. This practice is computationally expensive and development set intensive, since it repeats training, freezes sparsity, and misses fractional optima. We introduce GRASP LoRA (GRPO Guided Adapter Sparsity Policy), which treats global sparsity as a learnable control variable. A GRPO controller interleaves with training, periodically probing candidate prune ratios on a small micro development set and updating a single global prune ratio online from its reward signal. It operates on merged source and target LoRA adapters on a frozen backbone and replaces grid search with one controller run that learns a prune ratio, followed by a single final merge and prune fine tuning run with pruning fixed to that ratio. On cross lingual transfer from English into Arabic and Chinese, including XL-Sum summarization and MLQA extractive question answering with Llama 3 8B, GRASP LoRA improves semantic faithfulness, content coverage, and answer quality over strong target only and merge and prune baselines. It reduces end to end runtime by multiple times relative to grid search, lowers reliance on large development sets, and makes adapter reuse practical for low resource deployment.
 
 ![GRPO controller pipeline](./grpo_controller.png)
